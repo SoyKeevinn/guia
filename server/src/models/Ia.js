@@ -14,9 +14,13 @@ export const Ia = sequelize.define(
         },
         str_detalles:{
             type: DataTypes.TEXT
-        }
+        },
+        json_pasos:{
+            type: DataTypes.JSONB
+        },
     },{
-        timetamps: false,
-        schema: "informacion"
+        timestamps: false,
+        schema: "informacion",
+        freezeTableName: true
     }
 );

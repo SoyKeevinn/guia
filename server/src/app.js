@@ -1,4 +1,5 @@
 import express from "express";
+import iaRoutes from "./routes/ia.routes.js";
 // import usuarioRautes from "./routes/usuarios.routes.js";
 // import recetaRoutes from "./routes/recetas.routes.js";
 import cors from "cors";
@@ -23,5 +24,7 @@ app.use(express.json());
 
 // app.use(usuarioRautes);
 // app.use(recetaRoutes);
+
+app.use(iaRoutes)
 
 export default app;
