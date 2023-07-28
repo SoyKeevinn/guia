@@ -12,12 +12,21 @@ export const Ia = sequelize.define(
         str_nombre:{
             type: DataTypes.STRING(255),
         },
+        str_categoria:{
+            type: DataTypes.STRING(255),
+        },
         str_detalles:{
             type: DataTypes.TEXT
         },
         json_pasos:{
             type: DataTypes.JSONB
         },
+        v_tiktok:{
+            type: DataTypes.JSONB
+        },
+        v_youtube:{
+            type: DataTypes.JSONB
+        }
     },{
         timestamps: false,
         schema: "informacion",

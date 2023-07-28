@@ -2,15 +2,22 @@ create table if not exists informacion.tb_ia(
 	int_id serial not null primary key,
 	str_nombre varchar(255) not null,
 	str_detalles text,
-    json_pasos jsonb
+    str_categoria varchar(255),
+    json_pasos jsonb,
+    v_tiktok jsonb,
+    v_youtube jsonb
 );
 
 insert into informacion.tb_ia(
     str_nombre, 
     str_detalles,
-    json_pasos) 
+    str_categoria,
+    json_pasos,
+    v_tiktok,
+    v_youtube) 
 values ('Chat GPT', 
 '¡Hola! Soy ChatGPT, una inteligencia artificial basada en el modelo GPT-3.5 desarrollado por OpenAI. Mi objetivo es brindarte información y asistencia en una amplia variedad de temas. ', 
+'General',
 '{"pasos":[
     {"paso 1":[
        {
@@ -54,6 +61,13 @@ values ('Chat GPT',
     "descripcion": "Puedo generar respuestas de longitud variable, desde respuestas cortas hasta respuestas más detalladas y completas. Si tienes preferencias sobre la longitud de las respuestas, indícamelo."
         }]
     }
-]}' 
+]}',
+'{
+    "https://www.tiktok.com/@antoniomartinez1980_/video/7259569314921975045?is_from_webapp=1&sender_device=pc&web_id=7102811431409911302",
+    "https://www.tiktok.com/@antoniomartinez1980_/video/7259569314921975045?is_from_webapp=1&sender_device=pc&web_id=7102811431409911302"
+}',
+'{
+    "no videos"
+}'
 
 );

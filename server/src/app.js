@@ -9,18 +9,18 @@ const app = express();
 // mideleware
 app.use(express.json());
 
-// const whiteList = [
-//   "http://localhost:4200",
-//   "https://localhost:4200",
-// //   "https://recetas.rubenvn.com",
-// ];
-// app.use(
-//   cors({
-//     credentials: true,
-//     origin: whiteList,
-//   })
-// );
-// // routes
+const whiteList = [
+  "http://localhost:3000",
+  "https://localhost:4200",
+//   "https://recetas.rubenvn.com",
+];
+app.use(
+  cors({
+    credentials: true,
+    origin: whiteList,
+  })
+);
+iaRoutes
 
 // app.use(usuarioRautes);
 // app.use(recetaRoutes);
