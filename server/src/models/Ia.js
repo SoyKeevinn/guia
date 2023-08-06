@@ -18,7 +18,22 @@ export const Ia = sequelize.define(
         str_detalles:{
             type: DataTypes.TEXT
         },
-        json_pasos:{
+        img_representacion:{
+            type: DataTypes.STRING(255),
+        },
+        str_link:{
+            type: DataTypes.STRING(255),
+        },
+        json_caracteristicat:{
+            type: DataTypes.JSONB
+        },
+        json_caracteristicad:{
+            type: DataTypes.JSONB
+        },
+        json_pasost:{
+            type: DataTypes.JSONB
+        },
+        json_pasosd:{
             type: DataTypes.JSONB
         },
         v_tiktok:{
